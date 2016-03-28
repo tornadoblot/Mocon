@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-//using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GoStart : MonoBehaviour {
@@ -15,8 +15,7 @@ public class GoStart : MonoBehaviour {
         {
             if (GetComponent<Collider2D>() == Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position)))
             {
-                //EditorSceneManager.LoadScene("GameScene");
-                Application.LoadLevel("GameScene");
+                SceneManager.LoadScene("GameScene");
             }
         }
     }
